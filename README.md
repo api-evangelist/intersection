@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Intersection is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Intersection is a New York-based, experience-driven out-of-home (OOH) media and technology company formed from the merger of Titan and Control Group. It operates street-level, transit, airport, bikeshare and place-based advertising networks across 13 major U.S. markets - including LinkNYC, the largest street-level digital network in New York City - and builds the software behind them, including the IxNConnect display-management platform and an AI-powered Order Management System that it announced on 2026-05-11 as reachable by AI agents through an MCP server built on the IAB Tech Lab OpenDirect 2.0 specification. That API is in beta and access is arranged by contacting Intersection directly; no public developer portal, base URL, or machine-readable contract is published.
+
+- https://www.intersection.com/
+- https://github.com/Intersection
+
+> The harvest backlog entry for this company carried https://www.nasdaqprivatemarket.com/ as its URL. That is the secondary-market venue where Intersection shares trade, not Intersection's web presence, and it has been replaced with the company's own site.
+

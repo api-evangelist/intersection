@@ -1,0 +1,76 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.intersection.com/
+note: >-
+  Intersection publishes no machine-readable contract, so nothing here could be read
+  out of a spec. Every entry records what was actually found and whether it is
+  contract-verifiable or only a vendor claim. No conformance was asserted to fill a
+  slot.
+standards:
+- id: opendirect-2.0
+  name: IAB Tech Lab OpenDirect 2.0
+  domain: out-of-home / programmatic-guaranteed advertising
+  conforms: false
+  claimed: true
+  verifiable: false
+  evidence:
+    url: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+    status: 200
+    quote: 'Standards-Based Integration: Built on IAB Tech Lab''s OpenDirect 2.0 specification.'
+  note: >-
+    This is the domain standard for Intersection's market and the provider names it
+    explicitly for its OMS API. It is recorded as claimed-but-unverified rather than
+    conformant because the OMS contract is not published: there is no OpenAPI, no
+    documented base URL and no public endpoint against which an OpenDirect 2.0 shape
+    (Products / Accounts / Orders / Lines / Assignments resources) could be observed.
+    A press-release mention is not a contract declaration.
+- id: gtfs-realtime
+  name: GTFS-realtime (google/transit)
+  domain: public transit real-time data
+  conforms: true
+  claimed: true
+  verifiable: true
+  evidence:
+    url: https://github.com/Intersection/gtfs-realtime-translators
+    status: 200
+    detail: >-
+      Intersection publishes and actively maintains an Apache-2.0 Python library
+      (latest release v1.15.2, 2026-02-24) that translates custom agency real-time
+      feeds into GTFS-realtime TripUpdate / VehiclePosition / Alert messages using
+      Google's gtfs-realtime-bindings and the gtfs-realtime.proto schema.
+  note: >-
+    Evidence is Intersection's own published source code, not a hosted feed. The
+    GTFS-realtime feeds themselves are operated by the transit agencies Intersection
+    serves, so this records that Intersection speaks the standard, not that it serves
+    a public GTFS-realtime endpoint.
+- id: openrtb
+  name: IAB OpenRTB
+  domain: programmatic advertising
+  conforms: false
+  claimed: false
+  verifiable: false
+  note: >-
+    Intersection's inventory is bought programmatically through third-party exchanges
+    and DSPs (Place Exchange, Vistar Media, Broadsign Reach, VIOOH, The Trade Desk,
+    DV360 and others named on its programmatic-OOH page). The OpenRTB contract in
+    those transactions belongs to those platforms, not to Intersection, so no OpenRTB
+    conformance is credited here. The archived openrtb2x repository in Intersection's
+    GitHub organization is a fork of the IAB reference implementation, last touched
+    2024-06-21, not an Intersection contract.
+cross_cutting:
+- id: oauth2
+  conforms: false
+  evidence: 'No OAuth surface reachable: /.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration both 404 on www.intersection.com.'
+- id: rfc9457
+  conforms: false
+  evidence: No error contract published.
+- id: rfc9116
+  conforms: false
+  evidence: '/.well-known/security.txt returns 404 on www.intersection.com.'
+compliance_certifications:
+  found: []
+  note: >-
+    No trust center, SOC 2 / ISO 27001 / PCI / HIPAA / FedRAMP claim, or compliance
+    page was found on intersection.com; probe-security-programs.py returned
+    vdp=none trust=none. No `Compliance` or `TrustCenter` pointer is wired.

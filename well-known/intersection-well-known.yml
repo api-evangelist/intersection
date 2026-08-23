@@ -1,0 +1,61 @@
+generated: '2026-08-23'
+method: probed
+source: live GET probes of /.well-known/* on every host named in apis.yml
+note: >-
+  Every canonical /.well-known/ path returns a real HTTP 404 on Intersection's only
+  reachable public host (www.intersection.com, a WordPress site on WP Engine). A
+  negative control path (/.well-known/this-should-not-exist-12345) also returns 404,
+  so the host is NOT a soft-404 catch-all and these are honest absences rather than
+  masked hits. hit_count is 0, therefore NO WellKnown or SecurityTxt pointer is wired
+  into apis.yml. Intersection publishes no other reachable host: ixn.intersection.com
+  resolves to twelve EC2 addresses but accepts no TCP connection on 80 or 443 (curl
+  exit 28, connection timed out), and api./oms./mcp./developer./docs.intersection.com
+  do not resolve at all.
+hit_count: 0
+soft_404_control:
+  path: /.well-known/this-should-not-exist-12345
+  status: 404
+  bytes: 53322
+hosts:
+- host: https://www.intersection.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+unreachable_hosts:
+- host: https://ixn.intersection.com
+  reason: DNS resolves (12 A records in AWS us-east-1) but no TCP service answers on 443 or 80
+  status: 0
+- host: https://api.intersection.com
+  reason: NXDOMAIN
+  status: 0
+- host: https://mcp.intersection.com
+  reason: NXDOMAIN
+  status: 0
+- host: https://developer.intersection.com
+  reason: NXDOMAIN
+  status: 0
+- host: https://docs.intersection.com
+  reason: NXDOMAIN
+  status: 0

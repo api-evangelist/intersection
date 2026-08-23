@@ -1,0 +1,22 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.intersection.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented. Intersection publishes no developer documentation of
+  any kind - no portal, no API reference, no getting-started page - so there is nothing
+  stating a quota, a window, a burst allowance, response headers (X-RateLimit-*,
+  RateLimit-*, Retry-After) or a 429 behaviour. Nothing could be probed either: the OMS
+  API has no published endpoint, and every candidate API host either NXDOMAINs
+  (api./mcp./oms./developer./docs.intersection.com) or accepts no connection
+  (ixn.intersection.com). An honest zero, not an unchecked field.
+evidence:
+- url: https://www.intersection.com/
+  status: 200
+- url: https://www.intersection.com/api-docs
+  status: 404
+- url: https://api.intersection.com/
+  status: 0
+  detail: NXDOMAIN

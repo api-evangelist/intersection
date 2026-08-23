@@ -1,18 +1,55 @@
 aid: intersection
 name: Intersection
-description: 'Intersection is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Intersection is a New York-based, experience-driven out-of-home (OOH)
+  media and technology company formed from the merger of Titan, a municipal out-of-home
+  advertising operator, and Control Group, a technology and design studio. It operates
+  street-level, transit, airport, bikeshare and place-based advertising networks across
+  13 major U.S. markets - including LinkNYC, the largest street-level digital network
+  in New York City - and it builds the software behind them: the IxNConnect display-management
+  and communications platform used by cities, transit agencies and airports, and an
+  AI-powered Order Management System (OMS) that exposes inventory discovery, availability,
+  pricing and campaign reservation to AI agents through an MCP server built on the
+  IAB Tech Lab OpenDirect 2.0 specification.'
+image: https://www.intersection.com/wp-content/themes/intersection/dist/images/favicons/apple-touch-icon.png
 url: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
-- Company
-apis: []
+- Advertising
+- Out Of Home
+- Digital Signage
+- Media
+- Smart Cities
+- Transit
+- Programmatic
+- Agents
+- MCP
+apis:
+- name: Intersection Order Management System (OMS) API
+  description: 'Intersection''s AI-powered Order Management System for out-of-home
+    advertising. Announced 2026-05-11, it is a single API over Intersection''s digital
+    screen inventory (LinkNYC and other street, transit, air and place-based networks,
+    7,000+ digital screens across 13 U.S. markets) covering inventory discovery, real-time
+    availability and pricing, media-plan construction and campaign reservation, with
+    human-in-the-loop approval before final booking. Standards-based: built on the
+    IAB Tech Lab OpenDirect 2.0 specification. Reachable by agents through an MCP server.
+    The surface is in beta and access is arranged by contacting Intersection directly;
+    no public developer portal, base URL, or machine-readable contract is published
+    as of the probe date.'
+  humanURL: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+  tags:
+  - Advertising
+  - Out Of Home
+  - Programmatic
+  - MCP
+  properties:
+  - type: MCPServer
+    url: mcp/intersection-mcp.yml
+  - type: Conformance
+    url: conformance/intersection-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +57,61 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.intersection.com/
+- type: Blog
+  url: https://www.intersection.com/insights/
+- type: BlogRSS
+  url: https://www.intersection.com/insights/feed/
+- type: Support
+  url: https://www.intersection.com/contact-us/
+- type: TermsOfService
+  url: https://www.intersection.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.intersection.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/Intersection
+- type: Press
+  url: https://www.intersection.com/press/
+- type: Careers
+  url: https://www.intersection.com/join-our-team/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/10016248
+- type: Twitter
+  url: https://twitter.com/intersection_co
+- type: Packages
+  url: packages/intersection-packages.yml
+- type: LLMsTxt
+  url: llms/intersection-llms.txt
+- type: DomainSecurity
+  url: security/intersection-domain-security.yml
+- type: Plans
+  url: plans/intersection-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/intersection-rate-limits.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Intersection's only API - the AI-powered OOH Order Management System it announced
+    on 2026-05-11 as an MCP server built on IAB Tech Lab OpenDirect 2.0 - is published
+    as a press release with no endpoint, no reference and no spec, ending in "contact
+    Intersection directly for access and integration", and every candidate API host
+    either NXDOMAINs or (ixn.intersection.com) resolves to twelve EC2 addresses that
+    accept no connection.
+  evidence:
+  - url: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+    status: 200
+  - url: https://www.intersection.com/openapi.json
+    status: 404
+  - url: https://www.intersection.com/.well-known/agent-card.json
+    status: 404
+  - url: https://registry.modelcontextprotocol.io/v0/servers?search=intersection
+    status: 200
+  - url: https://ixn.intersection.com/
+    status: 0
+  checked: '2026-08-23'

@@ -1,0 +1,49 @@
+generated: '2026-08-23'
+method: searched
+source: https://github.com/Intersection
+note: >-
+  Registry sweep of npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist
+  and crates.io found NO first-party Intersection client library. The one actively
+  maintained first-party open-source package is distributed from the GitHub repository
+  itself - it is not published to PyPI (pypi.org/pypi/gtfs-realtime-translators/json
+  returns 404; the unrelated PyPI project named "intersection" belongs to a different
+  author, gruvw, and is a Telegram word game). It is also NOT a client SDK for
+  Intersection's own OMS API - it is a transit-data translation library - so no
+  `SDKs` pointer is wired in apis.yml. Intersection publishes no client SDK for any
+  API it operates.
+packages:
+- language: python
+  registry: github
+  name: gtfs-realtime-translators
+  url: https://github.com/Intersection/gtfs-realtime-translators
+  install: pip install -e git+https://github.com/Intersection/gtfs-realtime-translators.git@<TAG>#egg=gtfs-realtime-translators
+  official: true
+  license: Apache-2.0
+  version: v1.15.2
+  published: '2026-02-24'
+  version_source: https://api.github.com/repos/Intersection/gtfs-realtime-translators/releases
+  description: >-
+    A set of open source Python libraries for translating custom real-time transit
+    data into the GTFS-realtime format (TripUpdate, VehiclePosition, Alert). Built on
+    Google's gtfs-realtime-bindings with custom extensions; the shipped translator
+    documented in the README is LaMetroGtfsRealtimeTranslator.
+  note: >-
+    Not on any package registry - install is a git+https pin to a tag, so consumers
+    must know the tag. Latest dated release is v1.15.2 (2026-02-24) and the latest
+    commit on master is 2026-02-23, so the library is current. A v2.0.0 tag also
+    exists but its commit is dated 2024-11-25, i.e. it predates the 1.15.x line and
+    is not the head of development - recorded here because a consumer resolving
+    "latest tag" would get an older tree than "latest release".
+registries_checked:
+- registry: pypi
+  query: gtfs-realtime-translators
+  status: 404
+- registry: pypi
+  query: gtfs_realtime_translators
+  status: 404
+- registry: npm
+  query: intersection ooh
+  result: no first-party package (all hits are unrelated intersection-observer utilities)
+- registry: github
+  query: org:Intersection
+  result: 54 public repositories, 20 non-forks, 19 of them archived 2023 or earlier

@@ -1,0 +1,62 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+name: Intersection Order Management System (OMS) MCP Server
+status: announced-beta
+summary: >-
+  On 2026-05-11 Intersection announced that its AI-powered Order Management System
+  (OMS) for out-of-home advertising is reachable by AI agents through an MCP (Model
+  Context Protocol) server, naming Claude and ChatGPT as clients. The provider
+  describes it as a single API over both digital screens (LinkNYC and the rest of the
+  street/transit/air/place-based network) and, in future, static formats, built on the
+  IAB Tech Lab OpenDirect 2.0 specification, with real-time availability and pricing
+  and human-in-the-loop safeguards before final booking.
+deployment:
+  mode: remote
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+deployment_note: >-
+  mode is `remote` because the provider describes a server that Claude and ChatGPT
+  users connect to, not a package a user installs; there is no npx/pip install line
+  anywhere in Intersection's material. The endpoint URL is NOT recorded because
+  Intersection does not publish one: the announcement says the platform is "now
+  available in beta, with agencies and brands invited to contact Intersection
+  directly for access and integration". No endpoint was guessed. Probes of
+  mcp.intersection.com, api.intersection.com and oms.intersection.com all return
+  NXDOMAIN, ixn.intersection.com resolves but answers no TCP connection, and the
+  official MCP registry (registry.modelcontextprotocol.io) returns zero servers for
+  "intersection". `verified: searched` records that this is the provider's own public
+  claim, not something this pipeline reached and called.
+tools:
+  status: not-published
+  note: >-
+    tools/list could not be run because no endpoint is published, so no tool schemas
+    were captured. The announcement names four agent-facing capabilities in prose -
+    discover inventory, check availability, build media plans, submit campaigns for
+    reservation - which are recorded below as capabilities, NOT as tool names. No tool
+    names, arguments or input schemas were invented.
+capabilities_described:
+- discover inventory
+- check availability and real-time pricing
+- build media plans
+- submit campaigns for reservation (human approval required before final booking)
+standards:
+- id: opendirect-2.0
+  name: IAB Tech Lab OpenDirect 2.0
+  basis: provider announcement
+  evidence: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+scale_claimed:
+  digital_screens: 7000
+  markets: 13
+  static_panels: future
+x-evidence:
+- url: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
+  status: 200
+  fetched: '2026-08-23'
+- url: https://registry.modelcontextprotocol.io/v0/servers?search=intersection
+  status: 200
+  result: '{"servers":[],"metadata":{"count":0}}'
+  fetched: '2026-08-23'

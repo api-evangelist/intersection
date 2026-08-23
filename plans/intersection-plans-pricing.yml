@@ -1,0 +1,23 @@
+generated: '2026-08-23'
+method: searched
+source: https://www.intersection.com/advertisers/buying-mechanisms/
+plan_count: 0
+plans: []
+note: >-
+  Intersection publishes no pricing tiers, rate card, or plan table anywhere on
+  intersection.com. Every commercial path routes to a contact form: the buying-mechanisms
+  page offers "Traditional Out-of-Home Execution" (sales-team led, "Contact Us") and
+  "Programmatic Self-Serve (via DSP)" (priced by the buyer's DSP through Place Exchange,
+  not by Intersection), and the programmatic-OOH page ends in "Ask us about programmatic
+  OOH - Contact Us". The one published free/low-cost offer, the LinkNYC Self-Service Ad
+  Portal (LinkLocal free placements for eligible NYC community organizations and small
+  businesses, and paid LinkDirect campaigns), is announced without a URL or any stated
+  price. The OMS API itself is in beta with access "by contacting Intersection directly",
+  so it has no published price either.
+evidence:
+- url: https://www.intersection.com/advertisers/buying-mechanisms/
+  status: 200
+- url: https://www.intersection.com/product/programmatic-ooh/
+  status: 200
+- url: https://www.intersection.com/announcement/intersection-launches-linknyc-self-service-portal-to-expand-free-and-low-cost-advertising-opportunities-for-businesses-of-all-sizes/
+  status: 200
