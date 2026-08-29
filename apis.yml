@@ -10,6 +10,17 @@ description: 'Intersection is a New York-based, experience-driven out-of-home (O
   AI-powered Order Management System (OMS) that exposes inventory discovery, availability,
   pricing and campaign reservation to AI agents through an MCP server built on the
   IAB Tech Lab OpenDirect 2.0 specification.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.intersection.com/wp-content/themes/intersection/dist/images/favicons/apple-touch-icon.png
 url: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/apis.yml
 x-type: company
