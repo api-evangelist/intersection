@@ -30,6 +30,16 @@ created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Advertising
+- Out-of-Home
+- Digital Signage
+- Media
+- Smart Cities
+- Transit
+- Programmatic
+- Agents
+- MCP
+tags_raw:
+- Advertising
 - Out Of Home
 - Digital Signage
 - Media
@@ -52,6 +62,11 @@ apis:
     as of the probe date.'
   humanURL: https://www.intersection.com/announcement/intersection-opens-extensive-street-level-ooh-network-to-ai-agents-for-planning-and-booking/
   tags:
+  - Advertising
+  - Out-of-Home
+  - Programmatic
+  - MCP
+  tags_raw:
   - Advertising
   - Out Of Home
   - Programmatic
