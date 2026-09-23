@@ -70,4 +70,3 @@ Intersection is a New York-based, experience-driven out-of-home (OOH) media and 
 - https://github.com/Intersection
 
 > The harvest backlog entry for this company carried https://www.nasdaqprivatemarket.com/ as its URL. That is the secondary-market venue where Intersection shares trade, not Intersection's web presence, and it has been replaced with the company's own site.
-
