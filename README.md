@@ -64,9 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Intersection is a New York-based, experience-driven out-of-home (OOH) media and technology company formed from the merger of Titan and Control Group. It operates street-level, transit, airport, bikeshare and place-based advertising networks across 13 major U.S. markets - including LinkNYC, the largest street-level digital network in New York City - and builds the software behind them, including the IxNConnect display-management platform and an AI-powered Order Management System that it announced on 2026-05-11 as reachable by AI agents through an MCP server built on the IAB Tech Lab OpenDirect 2.0 specification. That API is in beta and access is arranged by contacting Intersection directly; no public developer portal, base URL, or machine-readable contract is published.
+Intersection is a New York-based, experience-driven out-of-home (OOH) media and technology company formed from the merger of Titan, a municipal out-of-home advertising operator, and Control Group, a technology and design studio. It operates street-level, transit, airport, bikeshare and place-based advertising networks across 13 major U.S. markets - including LinkNYC, the largest street-level digital network in New York City - and it builds the software behind them: the IxNConnect display-management and communications platform used by cities, transit agencies and airports, and an AI-powered Order Management System (OMS) that exposes inventory discovery, availability, pricing and campaign reservation to AI agents through an MCP server built on the IAB Tech Lab OpenDirect 2.0 specification.
 
-- https://www.intersection.com/
-- https://github.com/Intersection
+**Areas:** Advertising · Out-of-Home · Digital Signage · Media · Smart Cities · Transit · Programmatic · Agents · MCP
 
-> The harvest backlog entry for this company carried https://www.nasdaqprivatemarket.com/ as its URL. That is the secondary-market venue where Intersection shares trade, not Intersection's web presence, and it has been replaced with the company's own site.
+## Intersection on APIs.io
+
+Everything profiled for Intersection is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/intersection/](https://apis.io/providers/intersection/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Intersection Order Management System (OMS) API](https://apis.io/apis/intersection/intersection-order-management-system-oms-api/) — Intersection's AI-powered Order Management System for out-of-home advertising. Announced 2026-05-11, it is a single API over Intersection's digital screen…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Intersection Order Management System (OMS) MCP Server](https://apis.io/servers/intersection/intersection-order-management-system-oms-mcp-server/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Intersection Domain Security](https://apis.io/security/intersection/intersection-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Intersection Plans Pricing](https://apis.io/plans/intersection/intersection-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Intersection Rate Limits](https://apis.io/rate-limits/intersection/intersection-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.intersection.com/)
+- [Support](https://www.intersection.com/contact-us/)
+- [Blog](https://www.intersection.com/insights/)
+- [Terms of service](https://www.intersection.com/terms-of-service/)
+- [Privacy policy](https://www.intersection.com/privacy-policy/)
+- [GitHub](https://github.com/Intersection)
+
+## API Evangelist rating
+
+**Kin Score 14.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.5 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 6.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/intersection/](https://apis.io/providers/intersection/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Intersection: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/intersection/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
